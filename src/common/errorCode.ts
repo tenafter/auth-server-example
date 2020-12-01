@@ -1,0 +1,8 @@
+export enum ServerErrorCode {
+    LOGIN_FAIL = 10001,
+    SIGNIN_FAIL,
+    JWT_INVALID,
+    REFRESH_FAIL,
+    REFRESH_FAIL_NEED_TO_LOGIN,
+    UNKNOWN_ERROR,
+}

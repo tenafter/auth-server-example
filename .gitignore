@@ -1,0 +1,6 @@
+/.env
+/.env.test
+/coverage
+/dist
+/logs
+/node_modules

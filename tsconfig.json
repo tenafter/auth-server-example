@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "es5",
+            "es6"
+        ],
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "incremental": true
+    },
+    "exclude": ["node_modules", "coverage", "test", "dist", "logs", "**/*spec.ts"]
+}
