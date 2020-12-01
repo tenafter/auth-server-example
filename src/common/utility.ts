@@ -18,19 +18,16 @@ export const verifyHeaderJwt = (
     next: NextFunction,
 ) => {
     const token = getJwt(req);
-    console.debug(`token : ${token}`);
     let jwtPayload: IJwtPayload;
 
     try {
         jwtPayload = jwt.verify(token, CONFIG().JWT.SECRET);
-        console.debug(`jwtPayload : ${JSON.stringify(jwtPayload)}`);
         res.locals.jwtPayload = jwtPayload;
     } catch (error) {
         const errRes: IErrorRes = {
             errCode: ServerErrorCode.JWT_INVALID,
             errMsg: 'Invalid or Missing JWT token',
         };
-        console.log('HttpStatus.UNAUTHORIZED ; ' + JSON.stringify(token));
         return res.status(HttpStatus.UNAUTHORIZED).send(errRes);
     }
 
