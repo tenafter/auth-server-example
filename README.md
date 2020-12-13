@@ -4,9 +4,8 @@
 - Node.js 환경에서 타입스크립트와 의존성 주입 패턴을 사용하여, 통합 계정을 관리하는 예제 
 - [routing-controllers](https://github.com/typestack/routing-controllers)와 [TypeDI](https://github.com/typestack/typedi) 라이브러리를 사용한 컨트롤러에 의존성 주입
 - Account 정보를 ORM으로 처리, [TypeORM](https://github.com/typeorm/typeorm)와 Postgresql를 이용
-- 구글/페이스북 엑세스 토큰을 검증하여 로그인 처리
-- 게스트 로그인 가능
-- JWT 발급 
+-	게임 개발 환경에 맞게 클라이언트에서 구글/페이스북 엑세스 토큰을 발급받는 것을 전제로, 서버에서는 이를 검증하면 기능만을 구현
+-	인증/로그인을 담당하는 마이크로 서비스를 염두에 두고 설계하여, 로그인이 완료되면 JWT를 발급
 
 ## API
 - /login
